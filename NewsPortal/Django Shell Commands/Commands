@@ -98,3 +98,7 @@ for comment in best_post.comment_set.all().order_by('-created_at'):
     print(f"User: {comment.user.username}")
     print(f"Rating: {comment.rating}")
     print(f"Text: {comment.text}\n")
+
+Задача к модулю 18: Проверка работы фильтра:
+from news.templatetags.custom_filters import censor
+print(censor("Тестовый текст о том, что он редиска"))  # Должно вернуть "Тестовый текст о том, что он р******"
